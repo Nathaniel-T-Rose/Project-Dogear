@@ -1,0 +1,29 @@
+.navbar {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    padding-block: 5px;
+    background-color: rgb(6, 36, 6);
+    color: #fbfbf3;
+}
+
+.navbar_links {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+
+.navbar_link {
+    text-decoration: none;
+    font-size: 18px;
+    color: #fbfbf3;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.navbar_link:hover {
+    text-decoration: underline;
+    color: #fbfbf3;
+}

@@ -1,0 +1,47 @@
+.fa {
+   width: var(--page-width);
+   overflow-x:hidden;
+   padding-block:60px;
+   padding-inline: 20px;
+   display: grid;
+   grid-template-columns: 40% auto; 
+}
+
+.fa_col-1,
+.fa_col-2 {
+    position: relative;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.fa_col-1 {
+    align-items: flex-start;
+    gap: 30px;
+    padding-inline: 40px;
+}
+
+.fa_col-2 {
+    align-items: flex-start;
+    justify-content: center;
+    gap: 10px;
+    overflow-x: auto;
+}
+
+.fa_img-wrapper {
+    width:100%;
+    object-fit: fill;
+   
+}
+
+.fa_col-img {
+    width: 100%;
+    object-fit:cover;
+    
+}
+
+.fa_link {
+    text-underline-offset: 6px;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+}
