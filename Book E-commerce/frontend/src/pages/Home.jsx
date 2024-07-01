@@ -7,8 +7,8 @@ const Home = () => {
   return (
     <div className='homescreen'>
         <Hero />
-        <FeaturedAuthors />  
         <FeaturedTitles />
+        <FeaturedAuthors />  
     </div>
   )
 }

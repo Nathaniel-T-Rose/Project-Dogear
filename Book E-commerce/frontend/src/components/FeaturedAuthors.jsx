@@ -15,7 +15,7 @@ const FeaturedAuthors = () => {
         <h3>Featured Author</h3>
         <h4 className='fa-author_name'>{author.name}</h4>
         <p className='fa-author_blurb'>{author.blurb}</p>
-        <Link to='/titles' clasName='fa-link'>Browse Author's Works</Link>
+        <Link to='/titles' className='fa-link'>Browse Author's Works</Link>
       </div>
       <div className='fa_img-wrapper'>
         <img 

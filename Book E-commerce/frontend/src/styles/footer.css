@@ -1,0 +1,70 @@
+.footer {
+    --color-primary: rbg(255,192,56);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.mailing {
+    display: flex;
+    gap: 15px;
+    padding-block:40px;
+    padding-inline: 15px;
+    background: rgb(6, 36, 6);
+    color: #fbfbf3;
+    width: 100%;
+    justify-content: center;
+}
+
+.mailing-wrapper {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.mailing_title {
+    margin-inline: 25px;
+    text-transform: capitalize;
+    font-size: var(--text-lg);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.3em;
+    letter-spacing: 0.5px;
+}
+
+.mailing_form {
+    display: flex;
+    justify-content: flex-end;
+    align-items: stretch;
+    height: 100%;
+    width: clamp(200px,50%,600px);
+    padding: 15px;
+}
+
+.mailing_email {
+    width: clamp(150px, 100%, 400px);
+    display: block;
+    height: 100%;
+    padding-inline: 10px;
+    background: rgb(6, 36, 6);
+    letter-spacing: 0.5px;
+    outline: 1px solid black;
+    color: #fbfbf3;
+}
+.mailing_email:focus{
+    outline: 1px solid #fbfbf3;
+}
+
+.mailing_submit {
+    background-color: rgb(6, 36, 6);
+    color: #fbfbf3;
+    font-size: medium;
+    letter-spacing: 1 px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.mailing_submit:hover {
+    background: rgb(13, 77, 13);
+}
