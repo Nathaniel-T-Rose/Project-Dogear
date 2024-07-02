@@ -1,0 +1,64 @@
+.card {
+    display: block;
+    padding: 5px;
+    margin-inline-start: 10px;
+    margin-block:30px;
+}
+
+.card:focus {
+    outline: solid 1px rgb(6, 36, 6); 
+}
+
+.card_img-wrapper{
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow 400ms ease-out;
+    box-shadow: 0 0 0 5px #ccccb9;
+}
+
+.card_img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.card_content{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 10px;
+    width: fit-content;
+
+    position: relative;
+    left:50%;
+    transform: translate(-50%)
+}
+
+.card_tite{
+    font-size: x-small;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+}
+
+.card_author{
+
+}
+
+.card_genres{
+
+}
+
+.card_blurb{
+
+}
+
+.card_price{
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 5px;
+    text-align: center;
+    font-size: 0.9em;
+}
