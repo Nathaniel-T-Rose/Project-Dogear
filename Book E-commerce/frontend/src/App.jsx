@@ -7,9 +7,9 @@ import Header from './components/Header'
 import Home from './pages/Home'
 import About from './pages/About'
 import Titles from './pages/Titles'
-import Genres from './pages/Genres'
+import Recommendations from './pages/Recommendations'
 import Footer from './components/Footer'
-
+import Books from './pages/Books'
 function App() {
 
   return (
@@ -18,9 +18,9 @@ function App() {
         <Header />
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/titles' element={<Titles />} />
+          <Route path='/titles' element={<Books />} />
           <Route path='/about' element={<About />} />
-          <Route path='/genres' element={<Genres />} />
+          <Route path='/recommendations' element={<Recommendations />} />
 
         </Routes>
         <Footer />

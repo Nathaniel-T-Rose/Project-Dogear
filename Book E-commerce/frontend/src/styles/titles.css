@@ -1,0 +1,12 @@
+.titles-display{
+    display: grid;
+    grid-template-columns: repeat(3,33%);
+    margin-top:10px;
+}
+
+.titles-none{
+    margin-bottom: auto;
+    margin-left: 12px;
+    margin-top: 14px;
+    font-style: italic;
+}

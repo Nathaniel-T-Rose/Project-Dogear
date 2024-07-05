@@ -1,4 +1,4 @@
 let baseString='';
 export default {
-
+    
 };

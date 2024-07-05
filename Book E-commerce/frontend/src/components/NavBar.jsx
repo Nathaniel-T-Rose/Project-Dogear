@@ -17,13 +17,13 @@ const NavBar = () => {
                 to='/titles'
                 className='navbar_link'
             > 
-            Titles 
+            Browse Titles 
             </NavLink>
             <NavLink
-                to='/genres'
+                to='/recommendations'
                 className='navbar_link'
             >
-            Genres
+            Need a recommendation?
             </NavLink>
             <NavLink
                 to='/about'
