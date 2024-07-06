@@ -1,30 +1,28 @@
 import { useState, useEffect } from 'react'
 import FlipMove from 'react-flip-move'
 import BookCard from '../components/BookCard';
+import axios from 'axios';
 import '../styles/titles.css'
 
-const Books = (props) => {
-  
-  const testBook={
-    id:1,
-    title:'Test Title',
-    author:'John Doe',
-    genre:'Fiction',
-    blurb:'This is the blurb for this book',
-    price:'$13.29',
-    img:'https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1522157426i/19063.jpg'
-  };
+const Books = (filter) => {
+  const [books,setBooks]=useState([]);
 
-  const books=[testBook,testBook,testBook,testBook];
-  console.log(books)
- {/* useEffect(() => {
+  useEffect(() => {
     async function fetchBooks() {
-      const request = await axios.get(option);
-      setBooks = request.data.results;
+      console.log('fetching books');
+      const data={
+        'author':'Anne Rice',
+        'title':'',
+        'genres':[]
+        /*"'Horror'"*/
+      }
+      const response = await axios.post('http://localhost:8000/bookcommerce/books',data);
+      console.log(response)
+      setBooks(response.data);
     }
-  },[option])
-  */}
-  
+    fetchBooks();
+  },[filter])
+
   return (
     <div className='titles'>
       <section className='titles-display'>

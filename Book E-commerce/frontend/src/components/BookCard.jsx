@@ -16,21 +16,25 @@ const BookCard = (props) => {
     setIsFocus(false);
   }
 
+  /*TODO: 
+  Fix processing script, off by one on string slice
+  */
+  content.image='https://'+content.image.slice(8)
+
   return (
     <div className='card' 
       onMouseEnter={handleInFocus}
       onMouseLeave={handleLeaveFocus} 
     >
       <div className='card_img-wrapper'>
-        <img src={content.img} 
+        <img src={content.image} 
           alt={content.title}
           className='card_img'
         />
       </div>
       <div className='card_content'>
-        <h4 className='card_title'>{content.title}</h4>
-        <h5 className='card_author'>{content.author}</h5>
-        <div className='card_price'>{content.price}</div>
+        <span className='card_title'>{content.title}</span>
+        <span className='card_author'>{content.author}</span>
       </div>
     </div>
   )

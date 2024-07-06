@@ -1,7 +1,8 @@
 .titles-display{
     display: grid;
-    grid-template-columns: repeat(3,33%);
+    grid-template-columns: repeat(4,25%);
     margin-top:10px;
+    
 }
 
 .titles-none{

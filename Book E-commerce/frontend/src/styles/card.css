@@ -1,25 +1,29 @@
 .card {
     display: block;
     padding: 5px;
-    margin-inline-start: 10px;
+    margin-inline-start: 30px;
+    margin-inline-end: 30px;
     margin-block:30px;
+    width : 75%;
 }
 
 .card:focus {
+    cursor: crosshair;
     outline: solid 8px rgb(6, 36, 6); 
 }
 
 .card_img-wrapper{
     height: 300px;
+    width: 100%;
     position: relative;
     overflow: hidden;    
-    box-shadow: 0 0 0 3.5px #2d1f09;
+    box-shadow: 0 0 0 4px #2d1f09;
 }
 
 .card_img{
     height: 100%;
     width: 100%;
-    object-fit: cover;
+    object-fit: fill;
 }
 
 .card_content{
@@ -43,10 +47,6 @@
 }
 
 .card_author{
-
-}
-
-.card_genres{
 
 }
 

@@ -17,7 +17,7 @@ def formatArrays():
                         genreString='{'+(genreString[1:-1] if genreString[1:-1] else "'Fiction'")+'}'
                         lineData[genreCol]=genreString
 
-                        urls=['https:'+data for data in lineData[URLCol].split('https')]
+                        urls=['https'+data for data in lineData[URLCol].split('https')]
                         urls=urls[1:]
                         #print(urls)
                         lineData[URLCol]=urls[0]

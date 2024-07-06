@@ -12,13 +12,15 @@ import Footer from './components/Footer'
 import Books from './pages/Books'
 function App() {
 
+  const [filter,setFilter]=useState('genre')
+
   return (
     <div>
       <BrowserRouter>
         <Header />
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/titles' element={<Books />} />
+          <Route path='/titles' element={<Books filter={filter} />} />
           <Route path='/about' element={<About />} />
           <Route path='/recommendations' element={<Recommendations />} />
 
