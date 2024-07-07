@@ -4,24 +4,26 @@ import BookCard from '../components/BookCard';
 import axios from 'axios';
 import '../styles/titles.css'
 
-const Books = (filter) => {
+const Books = ({title,author,genres}) => {
   const [books,setBooks]=useState([]);
 
   useEffect(() => {
     async function fetchBooks() {
       console.log('fetching books');
+      console.log(title);
       const data={
-        'author':'Anne Rice',
-        'title':'',
-        'genres':[]
-        /*"'Horror'"*/
+        'author':author,
+        'title':title,
+        'genres':genres
       }
+      console.log(data);
+      /*["'Horror'"]*/
       const response = await axios.post('http://localhost:8000/bookcommerce/books',data);
       console.log(response)
       setBooks(response.data);
     }
     fetchBooks();
-  },[filter])
+  },[title,author,genres])
 
   return (
     <div className='titles'>

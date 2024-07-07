@@ -1,0 +1,43 @@
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    color:#6a3324;
+    padding-left: 40px;
+}
+
+.search_label {
+    padding-top: 2rem;
+    font-size: large;
+}
+
+.search_wrapper {
+    width: 80%;
+    display:flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.search_options {
+    height:100%;
+    width:20%
+}
+
+.search_submit {
+    height:100%;
+    width: auto;
+    background-color: transparent;
+    translate:-60px;
+    color: rgb(6, 36, 6);
+    border: none;
+    outline: none;
+}
+
+.search_submit:focus{
+    outline: none;
+}
+
+
+

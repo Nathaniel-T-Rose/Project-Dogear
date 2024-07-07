@@ -1,5 +1,5 @@
 .footer {
-    --color-primary: rbg(255,192,56);
+    color: rbg(255,192,56);
     display:flex;
     justify-content: center;
     align-items: center;

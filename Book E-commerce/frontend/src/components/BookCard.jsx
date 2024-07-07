@@ -6,7 +6,6 @@ import '../styles/card.css';
 const BookCard = (props) => {
   const [isFocus,setIsFocus] = useState(false);
   const {content} = props;
-  console.log('content:',content);
 
   const handleInFocus = () => {
     setIsFocus(true);

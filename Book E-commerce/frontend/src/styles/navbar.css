@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     width:100%;
-    padding-block: 5px;
+    padding-block: 1px;
     background-color: rgb(6, 36, 6);
     color: #fbfbf3;
 }
@@ -25,5 +25,5 @@
 
 .navbar_link:hover {
     text-decoration: underline;
-    color: #fbfbf3;
+    color: #fbf9f3;
 }

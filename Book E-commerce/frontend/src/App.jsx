@@ -10,17 +10,20 @@ import Titles from './pages/Titles'
 import Recommendations from './pages/Recommendations'
 import Footer from './components/Footer'
 import Books from './pages/Books'
+import SearchBar from './components/SearchBar'
 function App() {
-
-  const [filter,setFilter]=useState('genre')
-
+  const [title,setTitle] = useState('');
+  const [author,setAuthor] = useState('');
+  const [genres,setGenres] = useState(["'Horror'","'Young Adult'"]);
+  
   return (
-    <div>
+    <div className='app'>
       <BrowserRouter>
         <Header />
+        <SearchBar setTitle={setTitle} setAuthor={setAuthor} />
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/titles' element={<Books filter={filter} />} />
+          <Route path='/titles' element={<Books title={title} author={author} genres={genres} />} />
           <Route path='/about' element={<About />} />
           <Route path='/recommendations' element={<Recommendations />} />
 
