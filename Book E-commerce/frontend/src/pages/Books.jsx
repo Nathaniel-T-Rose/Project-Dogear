@@ -11,6 +11,7 @@ const Books = ({title,author,genres}) => {
     async function fetchBooks() {
       console.log('fetching books');
       console.log(title);
+      console.log()
       const data={
         'author':author,
         'title':title,
@@ -29,7 +30,7 @@ const Books = ({title,author,genres}) => {
     <div className='titles'>
       <section className='titles-display'>
         {books.map((book) => (
-          <BookCard content={book}/>
+          <BookCard key={book.id} content={book} />
         ))}
       </section>
     </div>

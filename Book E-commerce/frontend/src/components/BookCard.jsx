@@ -1,19 +1,13 @@
-import {useState} from 'react'
+import {useState,useContext} from 'react'
 
-import { Link } from 'react-router-dom';
+import { useParams,Link } from 'react-router-dom';
+
+
 import '../styles/card.css';
 
-const BookCard = (props) => {
+const BookCard = (bookContent) => {
   const [isFocus,setIsFocus] = useState(false);
-  const {content} = props;
-
-  const handleInFocus = () => {
-    setIsFocus(true);
-  }
-
-  const handleLeaveFocus = () => {
-    setIsFocus(false);
-  }
+  const {content} = bookContent;
 
   /*TODO: 
   Fix processing script, off by one on string slice
@@ -21,21 +15,21 @@ const BookCard = (props) => {
   content.image='https://'+content.image.slice(8)
 
   return (
-    <div className='card' 
-      onMouseEnter={handleInFocus}
-      onMouseLeave={handleLeaveFocus} 
+    <Link className='card' 
+      to={`/bookpage/${content.id}`}
     >
       <div className='card_img-wrapper'>
-        <img src={content.image} 
+        <img 
+          className='card_img' 
+          src={content.image} 
           alt={content.title}
-          className='card_img'
         />
       </div>
       <div className='card_content'>
         <span className='card_title'>{content.title}</span>
         <span className='card_author'>{content.author}</span>
       </div>
-    </div>
+    </Link>
   )
 }
 

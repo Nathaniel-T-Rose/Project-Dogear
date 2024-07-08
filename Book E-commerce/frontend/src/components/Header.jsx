@@ -12,9 +12,12 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import logo from '../assets/images/logo.png';
 
 import '../styles/header.css';
+import cartContext from '../pages/Cart/CartContext.jsx';
 
 const Header = () => {
   
+  const { cartItems } = useContext(cartContext);
+    console.log(cartItems)
   
   return (
     <header className='header'>
@@ -27,6 +30,11 @@ const Header = () => {
             to="/checkout"
             className="header_btn-icon"
           >
+            {cartItems.length > 0 && (
+            <div className='header_btn-icon cart-num-items'>
+              {cartItems.length}
+            </div>
+            )}
             <ShoppingCartOutlinedIcon fontSize='large'/>
           </Link>
         </div>

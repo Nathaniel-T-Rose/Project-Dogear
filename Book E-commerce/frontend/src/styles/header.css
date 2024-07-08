@@ -53,3 +53,16 @@
 .header_btn-icon:hover {
     color: rgb(6, 36, 6);
 }
+
+.cart-num-items {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    border-radius: 50px;
+    aspect-ratio: 1/1;
+    text-align: center;
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-weight: bold;
+
+}

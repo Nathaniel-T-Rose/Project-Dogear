@@ -9,8 +9,10 @@
 }
 
 .search_label {
+    align-items: center;
     padding-top: 2rem;
     font-size: large;
+    width:80%;
 }
 
 .search_wrapper {

@@ -11,25 +11,29 @@ import Recommendations from './pages/Recommendations'
 import Footer from './components/Footer'
 import Books from './pages/Books'
 import SearchBar from './components/SearchBar'
+import { useNavigate} from 'react-router-dom';
+import BookPage from './pages/BookPage'
+
 function App() {
   const [title,setTitle] = useState('');
   const [author,setAuthor] = useState('');
   const [genres,setGenres] = useState(["'Horror'","'Young Adult'"]);
-  
+  const [book,setBook]=useState({});
+  const navigator = useNavigate();
+
   return (
     <div className='app'>
-      <BrowserRouter>
         <Header />
-        <SearchBar setTitle={setTitle} setAuthor={setAuthor} />
+        <SearchBar setTitle={setTitle} setAuthor={setAuthor} nav={navigator} />
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/titles' element={<Books title={title} author={author} genres={genres} />} />
-          <Route path='/about' element={<About />} />
+          <Route path='/bookpage/:id' element={<BookPage />} />
+          <Route path='/about' element={<About nav={navigator} />} />
           <Route path='/recommendations' element={<Recommendations />} />
 
         </Routes>
         <Footer />
-      </BrowserRouter>
     </div>
   )
 }

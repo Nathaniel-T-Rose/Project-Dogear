@@ -12,15 +12,8 @@
     border: 1px black;    
 }
 
-
-.card:focus {
-    cursor: crosshair;
-    border: solid 4px rgb(6, 36, 6); 
-    
-}
-
 .card:hover {
-    border: solid 3px rgb(6, 36, 6);
+    border: solid 4px rgb(6, 36, 6);
     transform:scale(1.05);
     
 }

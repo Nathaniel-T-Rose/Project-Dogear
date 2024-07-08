@@ -1,21 +1,20 @@
 import { useEffect, useState } from 'react'
 import { TextField, Select, MenuItem, InputLabel, FormControl, Button } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
-import { useNavigate} from 'react-router-dom';
+
 import '../styles/search.css';
 
 
-const SearchBar = ({setTitle,setAuthor}) => {
+const SearchBar = ({setTitle,setAuthor,nav}) => {
     const [inputText, setInputText] = useState("");
     const [searchMode, setSearchMode] = useState('Title');
-    const navigate = useNavigate();
 
     const handleSearch = () => {
-        {setAuthor}('');
-        {setTitle}('');
+        setAuthor('');
+        setTitle('');
         console.log(((searchMode==='Title') ? setTitle : setAuthor),inputText);
         ((searchMode==='Title') ? setTitle : setAuthor)(inputText);
-        navigate('/titles')    
+        nav('/titles')    
     };
 
   return (
