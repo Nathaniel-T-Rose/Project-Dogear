@@ -1,4 +1,11 @@
+.titles{
+    width:100%;
+    align-content: center;
+    position: relative;
+}
+
 .titles-display{
+    position:relative;
     display: grid;
     overflow-wrap: normal;
     grid-template-columns: repeat(auto-fit,335px);
@@ -7,11 +14,42 @@
     margin-top:10px;
     margin-left:10px;
     justify-content: center;
+    margin-block: 5px;
+    padding-block: 5px;
+}
+
+.titles-container{
+    margin-block:5px;
 }
 
 .titles-none{
     margin-bottom: auto;
-    margin-left: 12px;
-    margin-top: 14px;
+    margin-left: 10px;
+    margin-block: 40px;
     font-style: italic;
+}
+
+.titles-filter{
+    position: absolute;
+    right:5%;
+    z-index: 1;
+    size: 10px;
+    color:rgb(6,36,6)
+}
+.titles-filter select{
+    background: transparent;
+    border: 1px solid rgb(6,36,6);
+    color: rgb(6,36,6);
+}
+
+.titles-filter option{
+    background: ivory;
+    border: 1px solid rgb(6,36,6);
+    color: rgb(6,36,6);
+}
+
+.titles-paginator{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
 }

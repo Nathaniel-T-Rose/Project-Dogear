@@ -18,7 +18,7 @@ import Cart from './pages/Cart/Cart'
 function App() {
   const [title,setTitle] = useState('');
   const [author,setAuthor] = useState('');
-  const [genres,setGenres] = useState(["'Horror'","'Young Adult'"]);
+  const [genres,setGenres] = useState([]);
   const [book,setBook]=useState({});
   const navigator = useNavigate();
 

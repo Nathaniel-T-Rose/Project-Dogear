@@ -17,7 +17,7 @@ import cartContext from '../pages/Cart/CartContext.jsx';
 const Header = () => {
   
   const { cartItems } = useContext(cartContext);
-    console.log(cartItems)
+  console.log(cartItems)
   
   return (
     <header className='header'>
