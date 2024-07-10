@@ -26,8 +26,8 @@ const BookPage = () => {
   },[])
 
   const isInCart = (book) => {
-    return !!cartItems.find((item) => item.id === book.id);
-  }
+    return cartItems.find((item) => item.id === book.id);
+  };
   
   return (
     <>
@@ -56,20 +56,25 @@ const BookPage = () => {
             {`Average Rating: ${book.avg_rating}/5 `}
           </div>
         </section>
-        <hr width='100%' color='black'/>
+        <hr width='100%' color='rgb(3,36,3)'/>
         <section className='book-pg_details-container'>
           <h2 className='book-pg_title'>{book.title}</h2>
           <h3 className='book-pg_author'>{`By: ${book.author} `}</h3>
           <div className='book-pg_details'>
             <p className='book-pg_blurb'>{book.description}</p>
           </div>
-          <h4 className='book-pg_price'>{`Price: $${book.price}`}</h4>
+          <h4 className='book-pg_price'>{`$${book.price}`}</h4>
           <div className='book-pg_admin-details'>
             {book.stock > 0 ? (
               <button
                 className='book-pg_add-btn'
-                type='submit'
-                onClick={()=> !isInCart ? increase(book):addToCart(book)}
+                type='button'
+                id='book-pg_add-btn'
+                onClick={(e)=> {
+                  e.preventDefault();
+                  isInCart(book) ? increase(book):addToCart(book);
+                  }
+                }
               >
                 Add to Cart
               </button>

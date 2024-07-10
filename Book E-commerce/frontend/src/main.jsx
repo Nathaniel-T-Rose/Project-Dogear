@@ -6,11 +6,10 @@ import { BrowserRouter } from 'react-router-dom';
 import CartState from './pages/Cart/CartState.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
     <CartState>
       <BrowserRouter>
         <App />
       </BrowserRouter>
     </CartState>
-  </React.StrictMode>,
+  ,
 )

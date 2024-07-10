@@ -19,7 +19,6 @@ const SearchBar = ({setTitle,setAuthor,nav}) => {
 
   return (
     <section className="search">
-        <span className='search_label'> Already know what you're looking for?</span>
         <div className='search_wrapper'>
             <div className='search_element'>
             <Select
@@ -37,7 +36,7 @@ const SearchBar = ({setTitle,setAuthor,nav}) => {
                 id="outlined-basic"
                 onChange={(e)=>{setInputText(e.target.value)}}
                 fullWidth
-                label='Search'
+                label='Search for books by title or author'
                 color='success'
             />
             <button className='search_submit' onClick={handleSearch} 

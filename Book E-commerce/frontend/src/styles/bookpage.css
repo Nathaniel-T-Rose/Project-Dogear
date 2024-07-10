@@ -22,12 +22,13 @@
 }
 
 .book-pg_navlinks{
+    
     margin: 10px 0px 10px 0px;
     padding-top: 10px;
 }
 
 .book-pg_navlink {
-    font-size: 12.5px;
+    font-size:small;
     font-family: Helvetica, Arial, sans-serif, monospace;
     font-weight: bold;
     color: rgb(84, 88, 82);
@@ -58,6 +59,7 @@
     align-items: center;
     font-weight: bold;
     flex-direction: column;
+    
 }
 
 .book-pg_details-container {
@@ -66,20 +68,35 @@
     border: 1px solid black;
     box-shadow: 6px 6px 8px rgb(84, 88, 82);   
     text-overflow: ellipsis;
-    word-wrap: nowrap;
-    overflow: hidden;
+    justify-content: left;
 }
 
 .book-pg_title{
     font-size: large;
-    gap: 12px;
+    text-transform: capitalize;
+}
+
+.book-pg_author{
+    font-size: large;
     text-transform: capitalize;
 }
 
 .book-pg_blurb{
+    padding-left: 40px;
+    padding-right: 40px;
+
     text-overflow: ellipsis;
     word-wrap: nowrap;
-    overflow: hidden;
+    justify-content: left;
+    text-align: left;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 15;
+    -webkit-box-orient: vertical;
+    overflow-y: auto;
+}
+
+.book-pg_price{
 }
 
 .book-pg_add-btn{
@@ -93,7 +110,7 @@
 
 .book-pg_add-btn:hover{
     color: #fbfbf3;
-    border: none;
+    border: 2px solid rgb(6,36,6);
     background: rgb(6,36,6);
     transition: ease;
 }

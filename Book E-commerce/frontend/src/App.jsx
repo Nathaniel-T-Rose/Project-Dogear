@@ -13,6 +13,7 @@ import Books from './pages/Books'
 import SearchBar from './components/SearchBar'
 import { useNavigate} from 'react-router-dom';
 import BookPage from './pages/BookPage'
+import Cart from './pages/Cart/Cart'
 
 function App() {
   const [title,setTitle] = useState('');
@@ -25,13 +26,14 @@ function App() {
     <div className='app'>
         <Header />
         <SearchBar setTitle={setTitle} setAuthor={setAuthor} nav={navigator} />
+        <hr width='90%' color='rgb(3,36,3)'/>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/titles' element={<Books title={title} author={author} genres={genres} />} />
           <Route path='/bookpage/:id' element={<BookPage />} />
           <Route path='/about' element={<About nav={navigator} />} />
           <Route path='/recommendations' element={<Recommendations />} />
-
+          <Route path='/checkout' element={<Cart/> } />
         </Routes>
         <Footer />
     </div>
