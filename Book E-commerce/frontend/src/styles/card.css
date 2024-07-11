@@ -33,37 +33,34 @@
 }
 
 .card_content{
-    display: none;
+    display: flex;
+    flex-direction: column;
     width: 100%;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    margin-top: 1rem;
     width: fit-content;
-
     position: relative;
-    left:50%;
-    transform: translate(-50%);
-    font-size:small;
+    top: 8%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    font-size: small;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: bolder;
+    color: rgb(6,36,6); 
 }
 
-.card_tite{
-    font-size: x-large;
+.card_title{
+    margin-top: .9vh;
+    font-size: 1.5vh;
     text-align: center;
     letter-spacing: 0.5px;
     text-transform: capitalize;
 }
 
-.card_price{
-    display: flex;
-    flex-direction: column-reverse;
-    margin-top: 5px;
-    text-align: center;
-    font-size: 0.9em;
-}
-
-.card_content:hover{
-    display: flexbox;
+.card_author{
+    font-size: 1.3vh;
 }

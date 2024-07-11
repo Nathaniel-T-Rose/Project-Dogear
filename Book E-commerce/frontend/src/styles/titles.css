@@ -2,6 +2,7 @@
     width:100%;
     align-content: center;
     position: relative;
+    margin-top: 20px;
 }
 
 .titles-display{
@@ -15,7 +16,14 @@
     margin-left:10px;
     justify-content: center;
     margin-block: 5px;
-    padding-block: 5px;
+    padding-block: 20px;
+}
+
+.titles-filters-container{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 20px;
 }
 
 .titles-container{
@@ -33,9 +41,23 @@
     position: absolute;
     right:5%;
     z-index: 1;
-    size: 10px;
-    color:rgb(6,36,6)
+    color:rgb(6,36,6);
 }
+
+.titles-filter:focus{
+    border:2px solid rgb(6,36,6);
+}
+
+.titles-genres-filter{
+    width: 30%;
+    position: absolute;
+    left: 5%;
+    z-index: 1;
+}
+.titles-genres-filter:focus{
+    border: 2px solid rgb(6,36,6);
+}
+
 .titles-filter select{
     background: transparent;
     border: 1px solid rgb(6,36,6);
