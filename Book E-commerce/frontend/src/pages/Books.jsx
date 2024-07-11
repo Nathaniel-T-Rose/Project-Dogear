@@ -13,6 +13,8 @@ const Books = ({title,author,genres,setGenres}) => {
   const [page,setPage]=useState(1);
   const [order,setOrder]=useState('id');
 
+  console.log(genres);
+
   useEffect(() => {
     async function fetchBooks() {
       const data={
@@ -22,6 +24,7 @@ const Books = ({title,author,genres,setGenres}) => {
         'title':title,
         'genres':genres
       }
+      console.log(data);
       /*["'Horror'"]*/
       const response = await axios.post('http://localhost:8000/bookcommerce/books',data);
       setBooks(response.data.data);
@@ -37,7 +40,8 @@ const Books = ({title,author,genres,setGenres}) => {
       vals.push(values[idx].value);
     };
     setGenres(vals);
-  } 
+  }
+   
   const genre_vals=[
     {value: "'Fiction'", label: 'Fiction'},
     {value: "'Nonfiction'", label: 'Nonfiction'},

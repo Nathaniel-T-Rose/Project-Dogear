@@ -28,7 +28,7 @@ function App() {
         <SearchBar setTitle={setTitle} setAuthor={setAuthor} nav={navigator} />
         <hr width='90%' color='rgb(3,36,3)'/>
         <Routes>
-          <Route path='/' element={<Home />} />
+          <Route path='/' element={<Home setGenres={setGenres}/>} />
           <Route path='/titles' element={<Books title={title} author={author} genres={genres} setGenres={setGenres}/>} />
           <Route path='/bookpage/:id' element={<BookPage />} />
           <Route path='/about' element={<About nav={navigator} />} />

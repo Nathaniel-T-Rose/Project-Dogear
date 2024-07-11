@@ -1,0 +1,64 @@
+.genres {
+    display: block;
+    box-sizing: border-box;
+    align-content: center;
+}
+.genre-icons-wrapper{
+    width:100%;
+    margin:15px auto 7px;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    display: block;
+    max-width: 1440px;
+    overflow-y: hidden;
+}
+
+.genre-icons{
+    display:flex;
+    overflow-y: hidden;
+    transition:1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+    position:relative;
+    margin-left: auto;
+    cursor: pointer;
+    justify-content: center;
+}
+
+.genre-icons-group{
+    overflow-x: scroll hidden;
+    width: auto !important;
+    min-width: initial;
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    white-space: nowrap;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.genre-icon{
+    width:100px;
+    display: inline-block;
+    margin: 0 auto;
+    text-align: center;
+    flex-shrink: 0;
+    background: transparent;
+    color: black;
+}
+
+.genre-icon:hover{
+    transform: scale(1.05);
+}
+
+.icon-img{
+    width:70px;
+}
+.icon-label{
+    font-size: 11px;
+    line-height: 1.67;
+    padding-top: 4px;
+}
