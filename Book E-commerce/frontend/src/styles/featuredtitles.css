@@ -1,0 +1,22 @@
+.staff-picks{
+    margin-top: 0;
+    width:90.14%;
+    display: inline-flex;
+    align-content: center;
+    transform: translateY(-0.49em);
+    overflow: visible;
+}
+
+.sp-banner-wrapper{
+    align-self: center;
+    width:100%;
+    height: 100px;
+    background-image: url('src/assets/images/staff-picks.png');
+    min-height: 100%;
+    background-size: 33% 100%;
+}
+
+.sp-banner-img{
+    object-fit: fill;
+    object-position: 50% 50%;
+}

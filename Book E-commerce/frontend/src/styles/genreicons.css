@@ -52,6 +52,7 @@
 
 .genre-icon:hover{
     transform: scale(1.05);
+    color: black;
 }
 
 .icon-img{

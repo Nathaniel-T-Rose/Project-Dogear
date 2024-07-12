@@ -12,7 +12,6 @@ const SearchBar = ({setTitle,setAuthor,nav}) => {
     const handleSearch = () => {
         setAuthor('');
         setTitle('');
-        console.log(((searchMode==='Title') ? setTitle : setAuthor),inputText);
         ((searchMode==='Title') ? setTitle : setAuthor)(inputText);
         nav('/titles')    
     };

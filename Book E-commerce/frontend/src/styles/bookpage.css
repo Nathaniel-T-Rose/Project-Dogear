@@ -63,6 +63,7 @@
 }
 
 .book-pg_details-container {
+    width: 75%;
     margin-top: 15px;
     padding: 20px;
     border: 1px solid black;
