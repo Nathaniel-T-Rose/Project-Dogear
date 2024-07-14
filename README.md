@@ -2,7 +2,7 @@
 
 [**Live Link*]()
 
-Dog Ear is an e-commerce site offering a selection books similar to . It offers a range of titles and access to an AI recommendation system. This project was created to practice across the stack using Django, React, and Postgres. 
+Dog Ear Books is a mock of an e-commerce site offering a selection books. It offers a range of titles and access to an AI recommendation system. This project was created to practice across the stack using Django, React, and Postgres. 
 
 ## Tech Stack:
 -   React + Vite
@@ -14,7 +14,6 @@ Dog Ear is an e-commerce site offering a selection books similar to . It offers 
 - **Results Filtering and Ordering**: Results may be filtered by genre and may be ordered alphabetically by Title or Author, enhancing a user's ability to search for a specific title.
 - **Search**: Stock may be searched by title or author. Title search operates on 'contains' logic, so a user can find books they are lookig for based on title fragments. 
 - **Recommendations**:
-- 
 
 ### Display
 
