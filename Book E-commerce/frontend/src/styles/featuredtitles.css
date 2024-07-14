@@ -26,9 +26,10 @@
     width:100%;
     display: grid;
     grid-gap: 5px;
-    grid-template-columns: repeat(8,335px);
+    grid-template-columns: repeat(8,325px);
     grid-template-rows: 1fr;
     overflow-x: auto;
-    overflow-y: hidden;
     margin-left: 5%;
+    margin-right: 5%;
+    margin-block: 15px;
 }

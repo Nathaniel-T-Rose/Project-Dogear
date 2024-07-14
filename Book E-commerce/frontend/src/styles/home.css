@@ -1,0 +1,6 @@
+
+.home-description {
+    width: 80%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
