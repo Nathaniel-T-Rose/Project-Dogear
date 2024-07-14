@@ -32,6 +32,12 @@ class BookView(APIView):
     def post(self,request):
         this_id = request.data['id']
         return JsonResponse(model_to_dict(Books.objects.get(id=this_id)))
+
+class FeaturedView(APIView):
+    def post(self,request):
+        titles=request.data['titles']
+        results = [model_to_dict(Books.objects.get(title=title)) for title in titles]
+        return JsonResponse({'data':results})
 class RecommendationsView(APIView):
     def post(self,request):
         return Response()

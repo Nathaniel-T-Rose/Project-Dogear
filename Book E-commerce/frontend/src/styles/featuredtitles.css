@@ -1,7 +1,7 @@
 .staff-picks{
     margin-top: 0;
     width:90.14%;
-    display: inline-flex;
+    display: block;
     align-content: center;
     transform: translateY(-0.49em);
     overflow: visible;
@@ -14,9 +14,21 @@
     background-image: url('src/assets/images/staff-picks.png');
     min-height: 100%;
     background-size: 33% 100%;
+    margin-left: 5.5%;
 }
 
 .sp-banner-img{
     object-fit: fill;
     object-position: 50% 50%;
+}
+
+.staff-picks-cards{
+    width:100%;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(8,335px);
+    grid-template-rows: 1fr;
+    overflow-x: auto;
+    overflow-y: hidden;
+    margin-left: 5%;
 }

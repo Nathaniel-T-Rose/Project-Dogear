@@ -5,6 +5,9 @@
    padding-inline: 20px;
    display: grid;
    grid-template-columns: 1.25fr 1fr; 
+   align-content: center;
+   margin-left: 2.5%;
+   margin-right: 2.5%;
 }
 
 .fa_col-1,
