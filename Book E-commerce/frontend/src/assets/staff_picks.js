@@ -1,5 +1,5 @@
 const staff_picks= [
-    'Neverwhere (London Below, #1)',
+    'The Complete Maus',
     'Twilight (The Twilight Saga, #1)',
     'The Divine Comedy',
     'The Complete Sherlock Holmes',
