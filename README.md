@@ -19,9 +19,9 @@ Dog Ear is an e-commerce site offering a selection books similar to . It offers 
 ### Display
 
 ## Attributions
-This project is solely for personal use. I do not own any of the rights for the assets used in this project.
-All book data sourced from Kaggle. Additional attributes (price, stock, etc.) for titles were randomly generated. 
-Icons created by Freepik - Flaticon
+- This project is solely for personal use. I do not own any of the rights for the assets used in this project.
+- All book data sourced from Kaggle. Additional attributes (price, stock, etc.) for titles were randomly generated. 
+- Icons created by Freepik - Flaticon
 
 
 Developed by **Nathaniel Rose**
