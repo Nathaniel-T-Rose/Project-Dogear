@@ -5,7 +5,7 @@ import CartItem from './CartItem';
 import Checkout from '../../components/Checkout';
 
 const Cart = () => {
-    const { cartItems, checkout, clearCart } = useContext(cartContext);
+    const { cartItems, checkout, browse} = useContext(cartContext);
   return (
     <main>
         <section className='cart-header'>
@@ -16,7 +16,7 @@ const Cart = () => {
            <p>
                 Our team is gathering your books and they will be ready for pickup within 24 hours!
             </p>
-            <Link to='/titles' onClick={clearCart}>
+            <Link to='/titles' onClick={browse}>
                 Continue Browsing
             </Link> 
         </section>)}

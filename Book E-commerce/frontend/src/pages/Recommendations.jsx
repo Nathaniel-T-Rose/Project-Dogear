@@ -5,7 +5,8 @@ const Recommendations = () => {
 
   const [data, setData] = useState([]);
   const [titleInput, setTitleInput] = useState('');
-  const [authorInput, setAuthorInput] =useState('');
+  const [authorInput, setAuthorInput] = useState('');
+  const [recs, setRecs] = useState([]);
 
   function handleTitleChange(e){
     setTitleInput(e.target.value)
@@ -27,6 +28,20 @@ const Recommendations = () => {
     newData.splice(index, 1);
     setData(newData);
   };
+
+
+  const getRecommendations = () => {
+    async function fetchRecs() {
+      console.log('fetching recommendations');
+      const response = await axios.post('http://localhost:8000/bookcommerce/recommendations',data);
+      
+      console.log(response.data);
+      setRecs(response.data);
+    }
+    fetchRecs();
+  }
+
+
   return (
     <main className='recommendations' >
       <h2>Welcome to our automated recommendation system!</h2>
@@ -50,7 +65,7 @@ const Recommendations = () => {
               </li>
             ))}
           </ul>
-          <button>Get Recommendations</button>
+          <button onClick={getRecommendations}>Get Recommendations</button>
         </div>
       </section>
       <section className='recommendations-results'>

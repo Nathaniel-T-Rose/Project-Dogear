@@ -39,6 +39,10 @@ const CartState = ({ children }) => {
         dispatch({type: 'CHECKOUT'});
     };
 
+    const browse = () => {
+        dispatch({type: 'BROWSE'});
+    }
+
 
     return (
         //Add the functions that have been defined above into the Context provider, and pass on to the children
@@ -52,6 +56,7 @@ const CartState = ({ children }) => {
             decrease,
             handleCheckout,
             clearCart,
+            browse,
             ...state,
           }}
         >

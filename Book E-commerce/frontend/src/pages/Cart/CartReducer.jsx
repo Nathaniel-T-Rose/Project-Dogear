@@ -6,7 +6,8 @@ import {
     INCREASE,
     DECREASE,
     CHECKOUT,
-    CLEAR
+    CLEAR,
+    BROWSE
 } from './CartTypes.js';
 
 import TotalItems from './TotalItems.jsx';
@@ -62,6 +63,12 @@ const CartReducer = (state,action) => {
                 cartItems: [],
                 ...TotalItems([])
             };
+        case BROWSE:
+            return {
+                cartItems: [],
+                checkout: false,
+                ...TotalItems([])
+            }
         default:
             return state;
     }

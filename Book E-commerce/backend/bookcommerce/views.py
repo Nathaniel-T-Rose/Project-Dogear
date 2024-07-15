@@ -40,7 +40,10 @@ class FeaturedView(APIView):
         return JsonResponse({'data':results})
 class RecommendationsView(APIView):
     def post(self,request):
-        return Response()
+        print(request.data)
+        this_id=777
+
+        return JsonResponse(model_to_dict(Books.objects.get(id=this_id)))
     
 class CartView(APIView):
     def post(self,request):
