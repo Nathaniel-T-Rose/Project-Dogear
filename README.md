@@ -2,7 +2,7 @@
 
 [**Live Link*]()
 
-Dog Ear Books is a mock of an e-commerce site offering a selection books. It offers a range of titles and access to an AI recommendation system. This project was created to practice across the stack using Django, React, and Postgres. 
+Dog Ear Books is a mock of an e-commerce site offering a selection books. It offers a range of titles and access to an AI recommendation system. This project was created to practice across the stack using Django, React, and Postgres, as well as learning to use OpenAI's API. 
 
 ## Tech Stack:
 -   React + Vite
