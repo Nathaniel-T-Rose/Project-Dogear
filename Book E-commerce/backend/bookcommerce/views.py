@@ -9,6 +9,8 @@ from django.forms.models import model_to_dict
 from .serializers import BooksSerializer
 from django.core.paginator import Paginator
 
+from .recommender import *
+
 BOOKS_PER_PAGE=16
 class TitlesView(APIView):
     def post(self,request):
@@ -41,9 +43,11 @@ class FeaturedView(APIView):
 class RecommendationsView(APIView):
     def post(self,request):
         print(request.data)
-        this_id=777
+        
+        results=getRecommendations(request.data)
+        print(results)
 
-        return JsonResponse(model_to_dict(Books.objects.get(id=this_id)))
+        return JsonResponse(results)
     
 class CartView(APIView):
     def post(self,request):

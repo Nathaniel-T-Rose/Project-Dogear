@@ -13,4 +13,3 @@ class Books(models.Model):
     image = models.TextField()
     price = models.FloatField()
     stock = models.IntegerField()
-

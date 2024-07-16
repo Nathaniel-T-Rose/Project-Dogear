@@ -1,5 +1,8 @@
 import React, { useState } from 'react'
 import axios from 'axios'
+import BookCard from '../components/BookCard';
+
+import '../styles/recommendations.css'
 
 const Recommendations = () => {
 
@@ -36,7 +39,8 @@ const Recommendations = () => {
       const response = await axios.post('http://localhost:8000/bookcommerce/recommendations',data);
       
       console.log(response.data);
-      setRecs(response.data);
+      setRecs(response.data.recommendations);
+      console.log(recs)
     }
     fetchRecs();
   }
@@ -69,6 +73,12 @@ const Recommendations = () => {
         </div>
       </section>
       <section className='recommendations-results'>
+      <div className='recommendations-cards'>
+      {recs.map((book) => (
+          <BookCard content={book} onClick={{/*set back CSS*/}}/> 
+        )
+        )}
+      </div>
       <hr width='90%' color='rgb(3,36,3)'/>
       <p>
         Still can't find what you're looking for?

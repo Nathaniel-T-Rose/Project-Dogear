@@ -12,11 +12,11 @@ const BookCard = (bookContent) => {
   /*TODO: 
   Fix processing script, off by one on string slice
   */
-  content.image='https://'+content.image.slice(8)
-
+  /*content.image='https://'+content.image.slice(8)
+*/
   return (
     <Link className='card' 
-      to={`/bookpage/${content.id}`}
+      to={(content.id ? `/bookpage/${content.id}`:'')}
     >
       <div className='card_img-wrapper'>
         <img 
