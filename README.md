@@ -15,6 +15,12 @@ Dog Ear Books is a mock of an e-commerce site offering a selection books. It off
 - **Search**: Stock may be searched by title or author. Title search operates on 'contains' logic, so a user can find books they are lookig for based on title fragments. 
 - **Recommendations**: Users may enter titles to use for AI generated recommendations using GPT. This is handled via script which finds additional data from the Google Books API.
 
+## Future Extensions (IP - in progress)
+- **Combination Server/Client Pagination (IP)**: Server side pagination results in more calls needing to be made, slowing down overall flow on the site since each page is a new request being made. A combination approach would result in more responsively being able to get through.
+- **Quick Add (IP)**: Bypass the need to view individual book pages with a quick add button on each card in the search/browse view.
+- **Book Card Back**: add scrollable details on back of individual cards as a 'back side' with a flip animation or as a popup, functionally would work as an in-browse view of the individual book page.
+- **Full About Page**: add fleshed out about page for a full mock.
+
 ## Attributions
 - This project is solely for personal use. I do not own any of the rights for the assets used in this project.
 - All book data sourced from Kaggle. Additional attributes (price, stock, images, etc.) for titles were randomly generated or found via custom web scraper. 
