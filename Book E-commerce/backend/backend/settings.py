@@ -88,11 +88,11 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'bookcommerce',
-        'USER': 'bookcommerceuser',
-        'PASSWORD': 'book',
-        'HOST': 'localhost',
-        'PORT':'',
+        'NAME': 'postgres',
+        'USER': 'postgres.amzzcdkselwnxhrllfdi',
+        'PASSWORD': 'Pr0ject-D0g3ar',
+        'HOST': 'aws-0-us-west-1.pooler.supabase.com',
+        'PORT':'6543',
     }
 }
 

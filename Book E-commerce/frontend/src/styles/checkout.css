@@ -1,0 +1,16 @@
+.checkout-btn{
+    background: transparent;
+    outline: 2px solid rgb(6,36,6);
+    margin: 0px 10px;
+    letter-spacing: 1.25px;
+}
+
+.checkout-btn:hover{
+    outline: 2px solid rgb(6,36,6);
+    background: rgb(6,36,6);
+    color: ivory;
+    border: none;
+    transition: 0.3s;
+    transform: scale(1.15);
+}
+

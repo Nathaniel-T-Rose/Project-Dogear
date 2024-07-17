@@ -67,7 +67,8 @@ const CartReducer = (state,action) => {
             return {
                 cartItems: [],
                 checkout: false,
-                ...TotalItems([])
+                ...TotalItems(state.cartItems),
+                cartItems: [...state.cartItems]
             }
         default:
             return state;

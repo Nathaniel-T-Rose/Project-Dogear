@@ -3,13 +3,15 @@ from langchain_openai import ChatOpenAI
 from langchain.schema import HumanMessage, SystemMessage
 from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
 from fake_useragent import UserAgent
-
+from dotenv import load_dotenv
 
 
 ua = UserAgent()
-gpt_key = os.environ['OPEN_AI_KEY']
-google_books_key = os.environ['GOOGLE_API_KEY']
-
+load_dotenv()
+gpt_key = os.getenv('OPEN_AI_KEY')
+print(gpt_key)
+google_books_key = os.getenv('GOOGLE_API_KEY')
+print(google_books_key)
 headers = {
         "User-Agent": ua.firefox,
         "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",

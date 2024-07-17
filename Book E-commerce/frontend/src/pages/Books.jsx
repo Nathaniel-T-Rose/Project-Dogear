@@ -13,8 +13,6 @@ const Books = ({title,author,genres,setGenres}) => {
   const [page,setPage]=useState(1);
   const [order,setOrder]=useState('id');
 
-  console.log(genres);
-
   useEffect(() => {
     async function fetchBooks() {
       const data={
@@ -24,14 +22,12 @@ const Books = ({title,author,genres,setGenres}) => {
         'title':title,
         'genres':genres
       }
-      console.log(data);
-      /*["'Horror'"]*/
       const response = await axios.post('http://localhost:8000/bookcommerce/books',data);
       setBooks(response.data.data);
       setPageRange(response.data.page.pageMax);
     }
     fetchBooks();
-  },[title,author,genres,page,order])
+  },[books,title,author,genres,page,order])
 
   const handleGenres = (values) => {
     let vals=[];

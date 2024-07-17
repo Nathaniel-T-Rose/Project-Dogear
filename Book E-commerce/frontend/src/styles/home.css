@@ -4,3 +4,16 @@
     margin-left: 50%;
     transform: translateX(-50%);
 }
+
+.home-link{
+    color:black;
+    font-style: italic; 
+}
+
+.home-link:hover{
+    color: black;
+}
+
+.homescreen{
+    color:black;
+}

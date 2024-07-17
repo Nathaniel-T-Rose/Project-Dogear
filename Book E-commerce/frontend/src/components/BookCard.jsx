@@ -5,29 +5,24 @@ import { useParams,Link } from 'react-router-dom';
 
 import '../styles/card.css';
 
-const BookCard = (bookContent) => {
-  const [isFocus,setIsFocus] = useState(false);
-  const {content} = bookContent;
-
-  /*TODO: 
-  Fix processing script, off by one on string slice
-  */
-  /*content.image='https://'+content.image.slice(8)
-*/
+const BookCard = ({content}) => {
+  const book = content;
   return (
     <Link className='card' 
-      to={(content.id ? `/bookpage/${content.id}`:'')}
+      to={(book.id!==undefined ? `/bookpage/${book.id}`:'')}
     >
       <div className='card_img-wrapper'>
         <img 
           className='card_img' 
-          src={content.image} 
-          alt={content.title}
+          src={book.image} 
+          alt={book.title}
         />
       </div>
-      <div className='card_content'>
-        <span className='card_title'>{content.title}</span>
-        <span className='card_author'>{content.author}</span>
+      <div className='details-wrapper'>
+        <div className='card_book_details'>
+          <span className='card_title'>{book.title}</span>
+          <span className='card_author'>{book.author}</span>
+        </div>
       </div>
     </Link>
   )

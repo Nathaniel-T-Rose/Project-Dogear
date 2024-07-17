@@ -3,6 +3,9 @@ import cartContext from './CartContext';
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import RemoveCircleOutlineIcon from '@mui/icons-material/RemoveCircleOutline';
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
+import { Link } from 'react-router-dom'
+import '../../styles/cartItem.css'
+
 
 const CartItem = (props) => {
     const {removeFromCart, increase, decrease} = useContext(cartContext);
@@ -10,35 +13,52 @@ const CartItem = (props) => {
     const { book } = props;
 
   return (
-    <div className='cart-item'>
-        <div className='cart-item-book'>
-            <img className='cart-item-img' src={book.image} alt={book.title} />
-            <div className='cart-item-bookdetails'>
-                <h5>{book.title}</h5>
-                <p>{book.author}</p>
-                <p>{book.price}</p>
+    <tr className='cart-item'>
+        <td className='cart-item-col cart-item-book'>
+            <Link to={`/bookpage/${book.id}`}>
+                <img className='cart-item-img' src={book.image} alt={book.title} />
+            </Link>
+            <div className='cart-item-title'>{book.title}</div>
+        </td>
+        <td className='cart-item-col'>
+            <div className='cart-item-price'>
+                <p>{`$${book.price.toFixed(2)}`}</p>
             </div>
+        </td>
+        <td className='cart-item-col'>
         <div className='btn-container'>
-            <button 
-                className='cart-item-btn'
-                onClick={() => increase(book)}
-            >
-                <AddCircleOutlineIcon />
-            </button>
+            {
+                <button className='cart-item-btn' 
+                    onClick={() => { 
+                        book.quantity>1 ?
+                        decrease(book) : removeFromCart(book)}
+                    }
+                    >
+                    <RemoveCircleOutlineIcon />
+                </button>
+            }
             <div className='cart-item-quantity'>
                 <p>{book.quantity}</p>
             </div>
-            {book.quantity > 1 && (
-                <button className='cart-item-btn' onClick={() => decrease(book)}>
-                    <RemoveCircleOutlineIcon />
-                </button>
-            )}
-            <button className='cat-item-btn' onClick={() => removeFromCart(book)}>
-                <DeleteOutlineIcon />
+            <button 
+                className='cart-item-btn'
+                onClick={() =>
+                    {if(book.stock>book.quantity) {
+                        increase(book);
+                    }
+                    }
+                }
+            >
+                <AddCircleOutlineIcon />
             </button>
             </div>
-        </div>
-    </div>
+        </td>
+        <td className='cart-item-col'>
+        <div className='cart-item-total'>
+                <p>{`$${(book.price*book.quantity).toFixed(2)}`}</p>
+            </div>
+        </td>
+    </tr>
   )
 }
 

@@ -16,9 +16,7 @@ import cartContext from '../pages/Cart/CartContext.jsx';
 
 const Header = () => {
   
-  const { cartItems } = useContext(cartContext);
-  console.log(cartItems);
-  console.log({logo});
+  const { itemCount } = useContext(cartContext);
   
   return (
     <header className='header'>
@@ -31,9 +29,9 @@ const Header = () => {
             to="/checkout"
             className="header_btn-icon"
           >
-            {cartItems.length > 0 && (
+            {itemCount > 0 && (
             <div className='header_btn-icon cart-num-items'>
-              {cartItems.length}
+              {itemCount}
             </div>
             )}
             <ShoppingCartOutlinedIcon fontSize='large'/>

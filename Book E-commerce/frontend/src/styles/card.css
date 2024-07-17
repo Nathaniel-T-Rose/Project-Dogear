@@ -4,7 +4,6 @@
     margin-inline-start: 30px;
     margin-inline-end: 30px;
     margin-block: 30px;
-    gap: 15px;
     width : 75%;
     background:transparent;
     padding: 20px;
@@ -21,7 +20,6 @@
 .card_img-wrapper{
     height: 300px;
     width: 100%;
-    position: relative;
     overflow: hidden;
     box-shadow: 6px 6px 8px rgb(84, 88, 82);   
 }
@@ -32,35 +30,25 @@
     object-fit: fill;
 }
 
-.card_content{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    width: fit-content;
-    position: relative;
-    top: 8%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    z-index: 1;
-    font-size: small;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: bolder;
-    color: rgb(6,36,6); 
+.details-wrapper{
+    padding-top: 20px;
 }
 
+.card_book_details{
+    display: grid;
+    grid-template-rows: 1fr .5fr;
+    text-align: center;
+    color: rgb(6,36,6);
+}
 .card_title{
-    margin-top: .9vh;
-    font-size: 1.5vh;
+    font-size: 0.8em;
     text-align: center;
     letter-spacing: 0.5px;
     text-transform: capitalize;
+    font-weight: bolder;
 }
 
 .card_author{
-    font-size: 1.3vh;
+    font-size: 0.7em;
+    font-weight:bold;
 }

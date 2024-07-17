@@ -33,8 +33,8 @@
 .header_icons-wrapper {
     display:flex;
     position: absolute;
-    right:2.5%;
-    top:10%;
+    right:3%;
+    top:11%;
     left:auto;
     font-size: 6.5vw;
 }
@@ -56,11 +56,9 @@
 
 .cart-num-items {
     position: absolute;
-    top: -5px;
-    right: -5px;
-    border-radius: 50px;
-    aspect-ratio: 1/1;
-    text-align: center;
+    top: -11px;
+    right: -10px;
+    text-align:justify;
     font-size: 15px;
     letter-spacing: 1px;
     font-weight: bold;

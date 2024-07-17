@@ -1,19 +1,17 @@
 import React, { useContext } from 'react'
 import cartContext from '../pages/Cart/CartContext'
-
+import '../styles/checkout.css'
 const Checkout = () => {
     const {clearCart, handleCheckout, itemCount, total} = useContext(cartContext);
 
   return (
     <div>
-      <p>Total Items:</p>
-      <h4>{itemCount}</h4>
-      <p>ORDER TOTAL</p>
-      <h4>${total}</h4>
-      <hr />
+      <p>{`Total Items: ${itemCount}`}</p>
+      <p>{`Order Total: $${total}`}</p>
+      <hr solid color='rgb(6,36,6)' />
       <div>
-        <button onClick={handleCheckout}>CHECKOUT</button>
-        <button onClick={clearCart}>CLEAR</button>
+        <button className='checkout-btn' onClick={handleCheckout}>Checkout</button>
+        <button className='checkout-btn' onClick={clearCart}>Clear</button>
       </div>
     </div>
   )

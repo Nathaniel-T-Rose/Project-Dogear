@@ -6,6 +6,9 @@
   text-align: center;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   background:  #fbfbf3;
+  scrollbar-color: rgb(6,36,6) transparent;
+  scrollbar-width: minmax(.1vh,.1vw);
+  letter-spacing: 0.3px;
 }
 
 .app {

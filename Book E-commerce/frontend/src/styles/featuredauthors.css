@@ -8,6 +8,7 @@
    align-content: center;
    margin-left: 2.5%;
    margin-right: 2.5%;
+   color: black;
 }
 
 .fa_col-1,
@@ -33,7 +34,6 @@
     word-wrap: nowrap;
     justify-content: left;
     text-align: left;
-    
 }
 
 .fa_col-2 {
