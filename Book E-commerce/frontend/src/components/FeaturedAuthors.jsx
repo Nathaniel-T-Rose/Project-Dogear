@@ -15,10 +15,6 @@ const FeaturedAuthors = ({setAuthor}) => {
 
   return (
     <section className="fa">
-      <div className='fa_col-1'>
-        <h3 className='fa-author_name'>{`Featured Author: ${author.name}`}</h3>
-        <p className='fa-author_blurb'>{author.blurb}</p>
-      </div>
       <div className='fa_col-2'>
         <div className='fa_img-wrapper'>
           <img 
@@ -28,10 +24,14 @@ const FeaturedAuthors = ({setAuthor}) => {
             loading='lazy'
             />
         </div>
-        <Link to='/titles' className='fa_link' onClick={() => {setAuthor(author.name)}}>
-          Browse Author's Works
-          </Link>
       </div>
+      <div className='fa_col-1'>
+      <h3 className='fa-author_name'>{`Featured Author: ${author.name}`}</h3>
+        <p className='fa-author_blurb'>{author.blurb}</p>
+      </div>
+      <Link to='/titles' className='fa_link' onClick={() => {setAuthor(author.name)}}>
+          Browse Author's Works
+      </Link>
     </section>
   )
 }

@@ -5,6 +5,10 @@ import '@leenguyen/react-flip-clock-countdown/dist/index.css';
 import '../styles/about.css'
 
 const About = () => {
+  const d1=new Date('2024-08-01')
+  const d2= new Date()
+  const dif=d1.getTime()-d2.getTime()
+
   return (
     <div className='about'>
       <div className='about-clock'>
@@ -13,7 +17,7 @@ const About = () => {
         <h3>Time to launch: </h3>
         <FlipClockCountdown
           className='flip-clock'
-          to={new Date().getTime() + 622 * 3600 * 1000 + 5221}
+          to={new Date().getTime() + dif}
           labels={["DAYS", "HOURS", "MINUTES", "SECONDS"]}
           duration={0.5}
         /> 

@@ -1,10 +1,10 @@
 .fa {
    width: 90%;
    overflow-x:hidden;
-   padding-block:20px;
+   padding-block:50px;
    padding-inline: 20px;
    display: grid;
-   grid-template-columns: 1.25fr 1fr; 
+   grid-template-columns: repeat(auto-fit,minmax(500px,1fr));
    align-content: center;
    margin-left: 2.5%;
    margin-right: 2.5%;
@@ -19,12 +19,13 @@
     flex-direction: column;
     justify-content: center;
     height: auto;
+    padding-inline: 30px;
 }
 
 .fa_col-1 {
     align-items: center;
     padding-inline: 30px;
-    gap: 10px;
+    gap: 30px;
 
     display: -webkit-box;
     -webkit-line-clamp: 15;
@@ -34,13 +35,14 @@
     word-wrap: nowrap;
     justify-content: left;
     text-align: left;
+
 }
 
 .fa_col-2 {
     align-items: center;
     justify-content: center;
     text-align: center;
-    gap: 10px;
+    padding-bottom: 20px;
     
 }
 

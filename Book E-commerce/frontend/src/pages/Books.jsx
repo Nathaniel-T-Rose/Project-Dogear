@@ -91,7 +91,7 @@ const Books = ({title,author,genres,setGenres}) => {
       </section>
       {(books.length === 0 && 
         <section className='titles-none'>
-          We couldn't find what you're looking for in our online collection. Stop by our location and one of our associates will help you further!
+          We couldn't find what you're looking for in our online collection. Check your search parameters, or stop by our location and one of our associates will help you further!
         </section>
 
       )}

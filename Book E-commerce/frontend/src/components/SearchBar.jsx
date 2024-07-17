@@ -16,6 +16,12 @@ const SearchBar = ({setTitle,setAuthor,nav}) => {
         nav('/titles')    
     };
 
+    const handleKeyPress = (e) => {
+        if(e.key==='Enter') {
+            handleSearch();
+        }
+    }
+
   return (
     <section className="search">
         <div className='search_wrapper'>
@@ -37,6 +43,7 @@ const SearchBar = ({setTitle,setAuthor,nav}) => {
                 fullWidth
                 label='Search for books by title or author'
                 color='success'
+                onKeyUp={handleKeyPress}
             />
             <button className='search_submit' onClick={handleSearch} 
             >

@@ -3,6 +3,7 @@
     outline: 2px solid rgb(6,36,6);
     margin: 0px 10px;
     letter-spacing: 1.25px;
+    border-radius: 2px;
 }
 
 .checkout-btn:hover{
