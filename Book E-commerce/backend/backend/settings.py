@@ -145,6 +145,6 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-WSGI_APPLICATION = 'api.wsgi.app'
+WSGI_APPLICATION = 'bookcommerce.wsgi.app'
 
 STATIC_ROOT = BASE_DIR / "staticfiles" / "static"
