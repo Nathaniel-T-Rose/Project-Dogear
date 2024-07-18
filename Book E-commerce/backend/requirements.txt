@@ -6,6 +6,7 @@ fake-useragent==1.5.1
 langchain==0.2.7
 python-dotenv==1.0.1
 requests==2.31.0
+psycopg2-binary==2.9.8
 
 WARNING(pigar): some manual fixes are required since pigar has found duplicate requirements for the same import name.
 # WARNING(pigar): the following duplicate requirements are for import name: langchain_openai

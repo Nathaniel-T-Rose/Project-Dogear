@@ -13,5 +13,8 @@
         "dest": "bookcommerce/wsgi.py"
       }
     ],
+        "rewrites": [
+            { "source": "/(.*)", "destination": "/index.html" }
+        ],
     "installCommand": "pip install -r requirements.txt"
   }
