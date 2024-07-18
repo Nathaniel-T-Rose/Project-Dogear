@@ -35,9 +35,8 @@ const Recommendations = () => {
 
   const getRecommendations = () => {
     async function fetchRecs() {
-      console.log('fetching recommendations');
-      const response = await axios.post('http://localhost:8000/bookcommerce/recommendations',data);
-      
+      const response = await axios.post(import.meta.env.VITE_DOMAIN+'/bookcommerce/recommendations',data);
+      console.log(response);
       console.log(response.data);
       setRecs(response.data.recommendations);
       console.log(recs)

@@ -22,7 +22,7 @@ const Books = ({title,author,genres,setGenres}) => {
         'title':title,
         'genres':genres
       }
-      const response = await axios.post('http://localhost:8000/bookcommerce/books',data);
+      const response = await axios.post(import.meta.env.VITE_DOMAIN+'/bookcommerce/books',data);
       setBooks(response.data.data);
       setPageRange(response.data.page.pageMax);
     }

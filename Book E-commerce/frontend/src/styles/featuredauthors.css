@@ -24,6 +24,7 @@
 
 .fa_col-1 {
     align-items: center;
+    padding-block: 10px;
     padding-inline: 30px;
     gap: 30px;
 
@@ -40,23 +41,23 @@
 
 .fa_col-2 {
     align-items: center;
+    align-content: center;
     justify-content: center;
     text-align: center;
-    padding-bottom: 20px;
-    
+    overflow: hidden;
 }
 
 .fa_img-wrapper {
-    width:100%;
+    max-width: 60vw;
+    max-height: 400px;
     height:100;
-    object-fit: fill;
-    align-content: center;
    
 }
 
 .fa_col-img {
     width: 100%;
-    object-fit:cover;
+    object-fit: fill;
+    object-position:top;
 }
 
 .fa-author_name {
@@ -64,10 +65,13 @@
 }
 
 .fa_link {
+    position: relative;
+    margin-block: 10px;
     text-underline-offset: 2px;
     font-size:  16px;
     letter-spacing: 0.5px;
     color: black;
+    top: -25px;
 }
 
 .fa_link:hover {

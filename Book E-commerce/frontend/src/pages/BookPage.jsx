@@ -16,7 +16,7 @@ const BookPage = () => {
     at time of viewing */
   useEffect(() => {
     async function fetchBook() {
-      const response = await axios.post('http://localhost:8000/bookcommerce/book',data);
+      const response = await axios.post(import.meta.env.VITE_DOMAIN +'/bookcommerce/book',data);
       setBook(response.data);
       setLoading(false);
     }

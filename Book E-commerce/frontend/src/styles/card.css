@@ -8,7 +8,7 @@
     background:transparent;
     padding: 20px;
     box-shadow: 2px 4px 8px rgb(84, 88, 82);
-    border: 1px black;    
+    border: 1px black;   
 }
 
 .card:hover {
@@ -32,6 +32,9 @@
 
 .details-wrapper{
     padding-top: 20px;
+    align-items: center;
+    align-content: center;
+    text-align: center;
 }
 
 .card_book_details{

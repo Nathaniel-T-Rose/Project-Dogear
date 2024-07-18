@@ -13,7 +13,8 @@ const FeaturedTitles = () => {
       const data={
         'titles':staff_picks
       }
-      const response = await axios.post('http://localhost:8000/bookcommerce/featuredTitles',data);
+      console.log('domain:',import.meta.env.VITE_DOMAIN+'/bookcommerce/books')
+      const response = await axios.post(import.meta.env.VITE_DOMAIN+'/bookcommerce/featuredTitles',data);
       setTitles(response.data.data);
     }
     fetchBooks();
