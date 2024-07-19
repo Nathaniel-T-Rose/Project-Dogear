@@ -23,7 +23,7 @@ Dog Ear Books is a mock of an e-commerce site offering a selection books. It off
 
 ## Attributions
 - This project is solely for personal use. I do not own any of the rights for the assets used in this project.
-- All book data sourced from Kaggle. Additional attributes (price, stock, images, etc.) for titles were randomly generated or found via custom web scraper. 
+- All book data sourced from Kaggle. Additional attributes (price, stock, images, etc.) for titles were randomly generated or found via Google Books API. 
 - Icons created by Freepik - Flaticon
 
 
