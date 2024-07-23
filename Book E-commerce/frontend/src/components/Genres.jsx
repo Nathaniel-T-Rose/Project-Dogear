@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import genre_icons from './../assets/genre_icons';
+import genre_icons from '../assets/images/genre_icons';
 
 import '../styles/genreicons.css'
 

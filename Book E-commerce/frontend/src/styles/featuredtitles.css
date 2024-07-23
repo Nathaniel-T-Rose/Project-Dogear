@@ -11,7 +11,7 @@
     align-self: center;
     width:100%;
     height: 100px;
-    background-image: url('src/assets/images/staff-picks.png');
+    background-image: url('../assets/images/staff-picks.png');
     min-height: 100%;
     background-size: 33% 100%;
     margin-left: 5.5%;
