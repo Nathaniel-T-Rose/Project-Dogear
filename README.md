@@ -1,7 +1,5 @@
 # Project: Dogear
 
-[**Live Link*]()
-
 Dog Ear Books is a mock of an e-commerce site offering a selection books. It offers a range of titles and access to an AI recommendation system which will provide users a trio of potential titles to investigate based on their favorite books and authors. This project was created to practice skills across the stack using Django, React, and Postgres, as well as integrating with OpenAI's API. 
 
 ## Tech Stack:
